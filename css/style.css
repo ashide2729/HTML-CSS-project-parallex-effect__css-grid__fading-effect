@@ -10,7 +10,7 @@ body, html{
 
 .img1, .img2, .img3, .img4{
     position: relative;
-    opacity: 0.70;
+    opacity: 0.70;/*This line of code gives fading effect on images*/
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
