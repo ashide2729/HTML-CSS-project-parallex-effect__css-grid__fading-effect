@@ -1,0 +1,106 @@
+body, html{
+    height: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    line-height: 1.6em;
+    color: white;
+}
+
+.img1, .img2, .img3, .img4{
+    position: relative;
+    opacity: 0.70;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /*This line of code is responsible for parallex effect on images.*/
+}
+
+.img1{
+    background-image: url('../img/blue-sky-clear-sky-cold-346529.jpg');
+    min-height: 100%;
+}
+
+.img2{
+    background-image: url('../img/astronomy-beautiful-clouds-355465.jpg');
+    min-height: 400px;
+}
+
+.img3{
+    background-image: url('../img/beautiful-blur-bright-326055.jpg');
+    min-height: 400px;
+}
+
+.img4{
+    background-image: url('../img/birds-cold-conifer-917494.jpg');
+    min-height: 100%;
+}
+
+/*The section 1 and section 3 classed have grid display effect for demo*/
+
+.section-1{
+    display: grid;
+    grid-template-rows: 40% 60%;
+}
+
+.section-1 > div:nth-child(even){
+    background: rgb(78, 82,72);
+    padding: 5px;
+    text-align: center;
+}
+
+.section-1 > div:nth-child(odd){
+    background: rgb(58, 63, 50);
+    padding: 5px;
+    text-align: center;
+}
+
+.section-2{
+    text-align: center;
+    padding: 20px;
+    background: rgb(58, 63, 50);
+}
+
+.section-3{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-column-gap: 0.5em;
+    align-items: center;
+}
+
+.section-3 > div:nth-child(even){
+    background: rgb(78, 82,72);
+    padding: 5px;
+    text-align: center;
+}
+
+.section-3 > div:nth-child(odd){
+    background: rgb(58, 63, 50);
+    padding: 5px;
+    text-align: center;
+}
+
+.text{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.border{
+    background: rgb(58, 63, 50);
+}
+
+/*The lines of code below are used to specify device size for webpage to adjust according to it.*/
+
+@media(max-width: 568px){
+    .img1, .img2, .img3, .img4{
+        background-attachment: scroll;
+    }
+    .section-1 > div, .section-2, .section-3 > div{
+        padding: 0;
+    }
+}
